@@ -1,0 +1,16 @@
+    java.util.Map<k,v>集合
+    Map集合特点;
+        1.双列集合，一个元素包含两个值（key，value）
+        2.key和value的类型可以相同，也可以不相同
+        3.key不可重复，value允许重复
+        4.key与value一一对应
+
+    java.util.HashMap<k,v>集合 implements Map<k,v>接口
+    HashMap集合的特点：
+        1.底层是哈希表，查询速度快
+        2.无序，存取顺序可能不一致
+
+    java.util.LinkedHashMap<v,k>集合 implements HashMap<k,v>接口
+    LinkedHashMap集合特点;
+        1.底层是哈希表+链表（链表保证顺序）
+        2.有序，存取顺序一致

@@ -2,6 +2,7 @@ package Java_More.IO.ByteStream;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 
 /*
     java.io.InputStream:字节输入流
@@ -12,6 +13,12 @@ import java.io.IOException;
             一次读取一个字节
 
             int read(byte[] b):从输入流中读取一定数量的字节，并将其存储在缓冲区数组 b 中。
+            一次读取多个字节
+            1.byte[] 的作用：
+                存储一次读取的多个字节的数据，起到缓冲的作用
+                大小一般定义为1024或1024的整数倍，即大小一般定义为n个KB
+            2.返回值int：返回读取的有效字节个数
+
             void close():关闭此输入流并释放与该流关联的所有系统资源。
 
         java.io.FileInputStream extends InputStream
@@ -57,9 +64,15 @@ public class InputStream {
                     2.len = fis.read()：把读取到的字节赋值给len
                     3.(len = fis.read()) != -1：判断len是否不等于-1 即判断是否没有到末尾
          */
-        int len = 0;
-        while ((len = fis.read()) != -1) {
-            System.out.println((char) len);
+//        int len = 0;
+//        while ((len = fis.read()) != -1) {
+//            System.out.println((char) len);
+//        }
+
+        byte[] bytes = new byte[1024];
+        int len = 0;//
+        while ((len = fis.read(bytes)) != -1) {
+            System.out.println(new String(bytes,0,len));
         }
 
         //3.释放资源

@@ -1,5 +1,6 @@
 package Java_More.Collection;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 /*
@@ -17,7 +18,7 @@ import java.util.Iterator;
  */
 public class DemoArrayList {
     public static void main(String[] args) {
-        java.util.ArrayList<String> strings = new java.util.ArrayList<>();
+        ArrayList<String> strings = new ArrayList<>();
         strings.add("a");
         strings.add("b");
         strings.add("c");

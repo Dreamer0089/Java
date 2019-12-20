@@ -1,4 +1,4 @@
-package Java_More.Properties;
+package Java_More.IO.Properties;
 
 import java.io.*;
 import java.util.Properties;

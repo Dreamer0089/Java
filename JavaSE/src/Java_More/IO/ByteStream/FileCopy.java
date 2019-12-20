@@ -1,7 +1,6 @@
 package Java_More.IO.ByteStream;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -23,10 +22,10 @@ public class FileCopy {
 
         long start = System.currentTimeMillis();
         //1.创建一个字节输入流对象，构造方法中绑定要读取的数据源
-        FileInputStream fis = new FileInputStream("F:\\test\\picture.jpg");
+        FileInputStream fis = new FileInputStream("F:\\picture.jpg");
 
         //2.创建一个字节输出流对象，构造方法中绑定要写入的目的地
-        FileOutputStream fos = new FileOutputStream("f:\\picture.jpg");
+        FileOutputStream fos = new FileOutputStream("f:\\test\\picture.jpg");
 
 
         //3.使用字节输入流对象中的方法read读取文件
@@ -48,7 +47,7 @@ public class FileCopy {
 
         long end = System.currentTimeMillis();
 
-        System.out.println(end - start);
+        System.out.println("复制文件耗时：" + (end - start) + "毫秒。");
     }
 }
 
